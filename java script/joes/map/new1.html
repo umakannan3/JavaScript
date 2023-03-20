@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tablerow,th,td{
+            border:5px solid blue;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        
+            var details=
+            [{firstname:'Sownthariya',
+            lastname:'Kanagasabai',
+            emailid:'sownthitrz@gmail.com',
+            phoneno:'9952475661',
+            password:'****',
+            Address:{
+                AddressLine1:'19/1,mullainagar',
+                AddressLine2:'Ganapathy',
+                city:'coimbatore',
+                state:'tamilnadu',
+                country:'india',
+                pincode:'641006'}
+            },
+
+            {
+            firstname:'vignesh',
+            lastname:'Kanagasabai',
+            emailid:'vicky16@gmail.com',
+            phoneno:'7598559891',
+            password:'****',
+            Address:{
+                AddressLine1:'H-8,Annanagar',
+                AddressLine2:'Navalpattu',
+                city:'Trichy',
+                state:'tamilnadu',
+                country:'india',
+                pincode:'622515'}}
+            ];
+            function data(){
+                var a="<tr><td>FIRSTNAME</td><td>LASTNAME</td><td>emailid</td><td>PHONENO</td><td>PASSWORD</td><td>ADDRESSLINE1</td><td>ADDRESSLINE2</td><td>CITY</td><td>COUNTRY</td><td>PINCODE</td></tr>";
+                // detail.map((value,index)
+                details.map((i) =>{
+                    a +="<tr><td>"+i.firstname+"</td><td>"+i.lastname+"</td><td>"+i.emailid+"</td><td>"+i.phoneno+"</td><td>"+i.password+"</td><td>"+i.Address.AddressLine1+"</td><td>"+i.Address.AddressLine2+"</td><td>"+i.Address.city+"</td><td>"+i.Address.country+"</td><td>"+i.Address.pincode+"</td></tr>";
+                } );
