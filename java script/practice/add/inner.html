@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter No : <input type="number" id="val"></p>
+    <button type="button" onclick="verify()">Enter</button>
+    <p id="val2"></p>
+</body>
+<!-- <script>
+    function verify(){
+        var a = document.getElementById("val").value;
+        if(a<20){
+            document.getElementById("val2").innerHTML = "this no is less than 20"
+        }else {
+            document.getElementById("val2").innerHTML = "this no is greater than 20"
+        }
+    } -->
+</script>
+<script>
+    function verify(){
+        var count = 0;
+        var a = document.getElementById("val").value
+
+        for(let i=2;i<a;i++){
+            if( a%i == 0){
+                count++;
+                break;
+            }
+
+        }
+        if(count == 0){
+            document.getElementById("val2").innerHTML = a +" is a prime no"
+        }else{
+            document.getElementById("val2").innerHTML = a +" is not a prime no"
+        }
+    }
+</script>
+</html>
